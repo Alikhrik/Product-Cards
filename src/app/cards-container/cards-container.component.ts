@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList  } from '@angular/core';
 import { CardBlockComponent } from '../card-block/card-block.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cards-container.component.css'
 })
 export class CardsContainerComponent {
+
+  @ViewChildren(CardBlockComponent) CardBlockComponents!: QueryList<CardBlockComponent>;
+
+  applyDiscountAll() {
+    this.CardBlockComponents.forEach((child) => child.applyDiscount());
+  }
+
   products = [
     {id:1, name:'product1', price:110, description: 'product1 text description'},
     {id:2, name:'product2', price:120, description: 'product2 text description'},

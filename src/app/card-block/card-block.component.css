@@ -9,15 +9,20 @@
 
 .read-more:hover {
     background-color: rgb(94, 192, 224);
+    cursor: pointer;
 }
 
 .name {
     text-align: center;
 }
 
-.price {
-    text-align: center;
+.discounted, .price {
     font-weight: bold;
     font-size: 1.2em;
     color: crimson;
+}
+
+.discounted {
+    text-decoration: line-through;
+    color: gray;
 }

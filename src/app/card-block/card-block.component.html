@@ -1,3 +1,6 @@
 <div class="name">{{name}}</div>
-<div class="price">{{price}}</div>
+<div style="text-align: center;">
+    <span class="price" [ngClass]="discount != 0 ? 'discounted' : 'none' ">{{price}}</span>
+    <span class="price" *ngIf="discount != 0"> {{price - discount}}</span>
+</div>
 <button class="read-more" (click)="readMore()">Read more</button>
