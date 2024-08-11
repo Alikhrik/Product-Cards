@@ -1,0 +1,20 @@
+<div class="product">
+    <ng-container *ngIf="isNoContent() else productContent">
+        <div class="no-content">No content</div>
+    </ng-container>
+    <ng-template #productContent>
+        <div class="name">{{CurrentName}}</div>
+        <div class="price">{{CurrentPrice}}</div>
+        <div class="description">{{CurrentDescription}}</div>
+    </ng-template>
+</div>
+<div class="flex-container">
+    <app-card-block class="card-block"
+        (readMoreEvent)="showMore($event)"
+        *ngFor="let p of products"
+        [id]="p.id"
+        [name]="p.name"
+        [price]="p.price"
+        [description]="p.description">
+    </app-card-block>
+</div>
