@@ -18,9 +18,9 @@ export class CardsContainerComponent {
   }
 
   products = [
-    {id:1, name:'product1', price:110, description: 'product1 text description'},
-    {id:2, name:'product2', price:120, description: 'product2 text description'},
-    {id:3, name:'product3', price:130, description: 'product3 text description'}
+    {id:1, name:'product1', price:110, description: 'product1 text description', color: 'red'},
+    {id:2, name:'product2', price:120, description: 'product2 text description', color: 'blue'},
+    {id:3, name:'product3', price:130, description: 'product3 text description', color: 'green'}
   ]
 
   CurrentId?: number;
